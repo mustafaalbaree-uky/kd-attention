@@ -1,13 +1,13 @@
 """
-Grad-CAM generation for all ~3,925 ImageNette validation images — MobileNetV2 student.
+Grad-CAM generation for all ~3,925 ImageNette validation images - MobileNetV2 student.
 
 Loads teacher (ResNet-50), KD student, and baseline student checkpoints.
 For each image, computes a normalized Grad-CAM map for all three models and
 saves them to a single .npz file. Saves 10 sample overlay figures.
 
 Outputs:
-  students/mobilenet/results/gradcam_full/arrays/   — one .npz per image
-  students/mobilenet/results/gradcam_full/figures/  — 10 sample PNG overlays
+  students/mobilenet/results/gradcam_full/arrays/   - one .npz per image
+  students/mobilenet/results/gradcam_full/figures/  - 10 sample PNG overlays
 """
 import tarfile
 import urllib.request

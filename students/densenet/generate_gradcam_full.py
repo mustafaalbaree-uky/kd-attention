@@ -1,5 +1,5 @@
 """
-Grad-CAM generation for all ~3,925 ImageNette validation images — DenseNet-121 student.
+Grad-CAM generation for all ~3,925 ImageNette validation images - DenseNet-121 student.
 
 Loads teacher (ResNet-50), KD student, and baseline student checkpoints.
 For each image, computes a normalized Grad-CAM map for all three models and
@@ -8,8 +8,8 @@ saves them to a single .npz file. Saves 10 sample overlay figures.
 Grad-CAM target layer: model.features.denseblock4 (last dense block).
 
 Outputs:
-  students/densenet/results/gradcam_full/arrays/   — one .npz per image
-  students/densenet/results/gradcam_full/figures/  — 10 sample PNG overlays
+  students/densenet/results/gradcam_full/arrays/   - one .npz per image
+  students/densenet/results/gradcam_full/figures/  - 10 sample PNG overlays
 """
 import tarfile
 import urllib.request

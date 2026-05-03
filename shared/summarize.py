@@ -219,7 +219,7 @@ def main():
 
     arch_label = arch.title()
 
-    # Figure 1 — JS divergence bar chart
+    # Figure 1 - JS divergence bar chart
     fig, ax = plt.subplots(figsize=(4.5, 4))
     means = [js_kd.mean(), js_bl.mean()]
     stds  = [js_kd.std(),  js_bl.std()]
@@ -244,7 +244,7 @@ def main():
     plt.close(fig)
     print(f"Saved -> {figures_dir / 'figure1_js_divergence_bar.png'}")
 
-    # Figure 2 — JS divergence by outcome group (KD student)
+    # Figure 2 - JS divergence by outcome group (KD student)
     fig, ax = plt.subplots(figsize=(6.5, 4))
     group_labels = ["Both Correct", "Student Wrong\n+ Teacher Correct", "Both Wrong"]
     group_masks  = [kd_bc, kd_sw, kd_bw]
@@ -261,7 +261,7 @@ def main():
     ax.set_xticks(x)
     ax.set_xticklabels(group_labels)
     ax.set_ylabel("Mean JS Distance vs Teacher")
-    ax.set_title(f"KD Student — JS Divergence by Prediction Outcome", pad=10)
+    ax.set_title(f"KD Student - JS Divergence by Prediction Outcome", pad=10)
     ax.set_ylim(0, max(means_g) * 1.6)
     ax.yaxis.set_minor_locator(ticker.AutoMinorLocator(2))
     ax.grid(axis="y", linestyle="--", linewidth=0.5, alpha=0.7, zorder=0)
@@ -273,7 +273,7 @@ def main():
     plt.close(fig)
     print(f"Saved -> {figures_dir / 'figure2_js_by_outcome.png'}")
 
-    # Figure 3 — Spearman r distribution (overlaid histograms)
+    # Figure 3 - Spearman r distribution (overlaid histograms)
     fig, ax = plt.subplots(figsize=(6, 4))
     bins = np.linspace(-0.5, 1.0, 31)
     ax.hist(sp_kd, bins=bins, alpha=0.6, color=KD_COLOR, label="KD Student", density=True, zorder=3)
@@ -292,7 +292,7 @@ def main():
     plt.close(fig)
     print(f"Saved -> {figures_dir / 'figure3_spearman_distribution.png'}")
 
-    # Figure 4 — SSIM by outcome group (KD + baseline side by side)
+    # Figure 4 - SSIM by outcome group (KD + baseline side by side)
     fig, ax = plt.subplots(figsize=(7, 4))
     group_labels = ["Both Correct", "Student Wrong\n+ Teacher Correct", "Both Wrong"]
     kd_means, kd_stds = [], []
@@ -330,7 +330,7 @@ def main():
     plt.close(fig)
     print(f"Saved -> {figures_dir / 'figure4_ssim_by_outcome.png'}")
 
-    # Figure 5 — mIoU by outcome group (KD + baseline side by side)
+    # Figure 5 - mIoU by outcome group (KD + baseline side by side)
     fig, ax = plt.subplots(figsize=(7, 4))
     kd_means5, kd_stds5 = [], []
     bl_means5, bl_stds5 = [], []

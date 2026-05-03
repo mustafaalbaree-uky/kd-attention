@@ -111,7 +111,7 @@ def main():
     for cls_name in sorted(class_to_indices.keys()):
         npz_path = arrays_dir / f"{cls_name}_0001.npz"
         if not npz_path.exists():
-            print(f"  Missing: {npz_path.name} — skipping")
+            print(f"  Missing: {npz_path.name} - skipping")
             continue
 
         img_tensor, _ = dataset[class_to_indices[cls_name][0]]

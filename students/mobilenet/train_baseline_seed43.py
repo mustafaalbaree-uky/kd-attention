@@ -1,5 +1,5 @@
 """
-Baseline training: MobileNetV2 on ImageNette — seed 43 variant.
+Baseline training: MobileNetV2 on ImageNette - seed 43 variant.
 
 Identical to train_baseline.py in every way except the random seed,
 which is set to 43 (instead of 42). Used to establish a floor reference:

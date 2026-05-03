@@ -1,7 +1,7 @@
 """
 Baseline training: ResNet-18 on ImageNette with hard labels only.
 
-Loss = CrossEntropy(student_logits, hard_labels) — no teacher, no soft labels.
+Loss = CrossEntropy(student_logits, hard_labels) - no teacher, no soft labels.
 
 Identical architecture, dataset, preprocessing, optimizer, scheduler, and
 number of epochs as train_kd.py so the two results are directly comparable.
