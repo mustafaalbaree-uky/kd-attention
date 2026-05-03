@@ -1,0 +1,9 @@
+data/
+checkpoints/
+**/*.pth
+**/*.npz
+**/*.zip
+gradcam_full/
+__pycache__/
+*.pyc
+.DS_Store

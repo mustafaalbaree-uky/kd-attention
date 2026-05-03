@@ -1,0 +1,14 @@
+models:
+  teacher: resnet50
+  student: resnet18
+
+dataset:
+  name: frgfm/imagenette
+  image_size: 224
+  batch_size: 64
+
+training:
+  seed: 42
+  num_classes: 10
+  kd_temperature: 4
+  kd_alpha: 0.7
